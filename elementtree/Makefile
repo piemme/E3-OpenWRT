@@ -7,7 +7,7 @@
 
 include $(TOPDIR)/rules.mk
 PKG_NAME:=elementtree
-PKG_VERSION:=1.0.2-20050316
+PKG_VERSION:=1.2.6-20050316
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
