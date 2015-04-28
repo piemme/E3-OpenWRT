@@ -23,7 +23,7 @@ define Package/meld3
   SUBMENU:=Python
   TITLE:=meld3
   URL:=http://supervisord.org/
-  DEPENDS:=+python +elementtree
+  DEPENDS:=+python +setuptools +elementtree
   MAINTAINER:=Chris McDonough
 endef
 

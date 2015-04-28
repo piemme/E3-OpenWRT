@@ -6,41 +6,40 @@
 #
 
 include $(TOPDIR)/rules.mk
-PKG_NAME:=supervisor
-PKG_VERSION:=3.1.3
+PKG_NAME:=setuptools
+PKG_VERSION:=15.2
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://pypi.python.org/packages/source/s/supervisor/
-PKG_MD5SUM:=aad263c4fbc070de63dd354864d5e552
+PKG_SOURCE_URL:=https://pypi.python.org/packages/source/s/setuptools/
+PKG_MD5SUM:=a9028a9794fc7ae02320d32e2d7e12ee
 
 include $(INCLUDE_DIR)/package.mk
 $(call include_mk, python-package.mk)
 
-define Package/supervisor
+define Package/setuptools
   SECTION:=language-python
   CATEGORY:=Languages
   SUBMENU:=Python
-  TITLE:=supervisor
-  URL:=http://supervisord.org/
-  DEPENDS:=+python +setuptools +meld3 +elementtree
-  MAINTAINER:=Chris McDonough
+  TITLE:=setuptools
+  URL:=https://bitbucket.org/pypa/setuptools
+  DEPENDS:=+python 
+  MAINTAINER:=Python Packaging Authority
 endef
 
-define Package/supervisor/description
-Supervisor is a client/server system that allows its users to
-control a number of processes on UNIX-like operating systems.
+define Package/setuptools/description
+Easily download, build, install, upgrade, and uninstall Python packages
 endef
 
 define Build/Compile
 	$(call Build/Compile/PyMod,,install --prefix=/usr --root=$(PKG_INSTALL_DIR))
 endef
 
-define Package/supervisor/install
+define Package/setuptools/install
 	$(INSTALL_DIR) $(1)$(PYTHON_PKG_DIR)
 	$(CP) \
 		$(PKG_INSTALL_DIR)$(PYTHON_PKG_DIR)/* \
 		$(1)$(PYTHON_PKG_DIR)
 endef
 
-$(eval $(call BuildPackage,supervisor))
+$(eval $(call BuildPackage,setuptools))
