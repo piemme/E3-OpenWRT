@@ -23,7 +23,7 @@ define Package/python-twisted
   SUBMENU:=Python
   TITLE:=python-twisted
   URL:=https://twistedmatrix.com/
-  DEPENDS:=+python +zope-interface +python-pyasn1
+  DEPENDS:=+python +zope-interface +python-pyasn1 +pycrypto
   MAINTAINER:=Ondrej Mikle <ondrej.mikle@nic.cz>
 endef
 
