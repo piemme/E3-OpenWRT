@@ -7,7 +7,7 @@
 
 include $(TOPDIR)/rules.mk
 PKG_NAME:=pycrypto
-PKG_VERSION:=2.6.2
+PKG_VERSION:=2.6.1
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
