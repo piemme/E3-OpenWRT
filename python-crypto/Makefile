@@ -10,7 +10,7 @@ PKG_NAME:=pycrypto
 PKG_VERSION:=2.6.1
 PKG_RELEASE:=1
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://pypi.python.org/packages/source/p/pycrypto/
 PKG_MD5SUM:=55a61a054aa66812daf5161a0d5d7eda
 
