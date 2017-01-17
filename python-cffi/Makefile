@@ -24,7 +24,7 @@ define Package/python-cffi
 	SUBMENU:=Python
 	TITLE:=python-cffi
 	URL:=http://cffi.readthedocs.org/
-	DEPENDS:=+libffi +python-light +python-pycparser
+	DEPENDS:=+libffi +python +python-pycparser
 endef
 
 define Package/python-cffi/description
@@ -37,7 +37,7 @@ define Build/Compile
 	)
 endef
 
-define Package/python-requests/install
+define Package/python-cffi/install
 
 $(INSTALL_DIR) $(1)$(PYTHON_PKG_DIR)/
 	$(CP) \
